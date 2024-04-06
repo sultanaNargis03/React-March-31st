@@ -21,9 +21,13 @@ import { Component } from "react";
 // }
 
 //create component with arrow function
-const Heading = () => (
+const Heading = (props) => (
   <div>
-    <h1>it is a component with arrow function</h1>
+    <h1> {props.title}</h1>
+
+    <h2>{props.arrayofGreeting}!</h2>
+    <h3>{props.myObj.name}</h3>
+    <h4>{props.addTwoNumbers(6, 10)}</h4>
   </div>
 );
 export default Heading;
