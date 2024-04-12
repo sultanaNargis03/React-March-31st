@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Heading from "./Heading";
 import CustomComponent from "./CustomComponent";
+import Counter from "./Counter";
 function App() {
   let flag = false;
 
@@ -19,6 +20,7 @@ function App() {
         myObj={{ name: "Nargis", location: "Sultana" }}
         addTwoNumbers={(firstNum, secondNum) => firstNum + secondNum}
       />
+      <Counter starterValue={35} />
     </div>
   );
 }
