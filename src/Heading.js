@@ -22,12 +22,12 @@ import { Component } from "react";
 
 //create component with arrow function
 const Heading = (props) => (
-  <div>
-    <h1> {props.title}</h1>
+  <a>
+    <div> {props.title}</div>
 
-    <h2>{props.arrayofGreeting}!</h2>
-    <h3>{props.myObj.name}</h3>
-    <h4>{props.addTwoNumbers(6, 10)}</h4>
-  </div>
+    <div>{props.arrayofGreeting}!</div>
+    <div>{props.myObj.name}</div>
+    <div>{props.addTwoNumbers(6, 10)}</div>
+  </a>
 );
 export default Heading;

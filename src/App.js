@@ -8,6 +8,10 @@ function App() {
   return (
     <div className="App">
       {/* {flag ? <Heading /> : <CustomComponent />} */}
+      <NavBar
+        onShowDateTime={() => alert(new Date())}
+        onShowGreeting={() => alert("Hello! how are you?")}
+      ></NavBar>
       <Heading
         title="Learning React"
         const
@@ -19,4 +23,22 @@ function App() {
   );
 }
 
+function NavBar({ onShowDateTime, onShowGreeting }) {
+  return (
+    <div>
+      <MyButton onClick={onShowDateTime}>Show Date Time</MyButton>
+      <MyButton onClick={onShowGreeting}>Display Greeting</MyButton>
+    </div>
+  );
+}
+function showMessage() {
+  alert("Current Date/time: " + new Date().toLocaleTimeString());
+}
+// function hoverFunc() {
+//   console.log("we just hovered over the button...");
+// }
+
+function MyButton({ onClick, children }) {
+  return <button onClick={onClick}>{children}</button>;
+}
 export default App;
