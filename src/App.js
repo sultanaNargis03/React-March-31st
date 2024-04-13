@@ -3,13 +3,17 @@ import "./App.css";
 import Heading from "./Heading";
 import CustomComponent from "./CustomComponent";
 import Counter from "./Counter";
+import Slider from "./Slider";
+import Slider2 from "./Slider2";
 function App() {
-  let flag = false;
+  // let flag = false;
 
   return (
     <div className="App">
+      <Slider />
+      {/* <Slider2 /> */}
       {/* {flag ? <Heading /> : <CustomComponent />} */}
-      <NavBar
+      {/* <NavBar
         onShowDateTime={() => alert(new Date())}
         onShowGreeting={() => alert("Hello! how are you?")}
       ></NavBar>
@@ -20,7 +24,7 @@ function App() {
         myObj={{ name: "Nargis", location: "Sultana" }}
         addTwoNumbers={(firstNum, secondNum) => firstNum + secondNum}
       />
-      <Counter starterValue={35} />
+      <Counter starterValue={35} /> */}
     </div>
   );
 }
