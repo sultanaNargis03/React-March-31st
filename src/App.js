@@ -5,12 +5,21 @@ import CustomComponent from "./CustomComponent";
 import Counter from "./Counter";
 import Slider from "./Slider";
 import Slider2 from "./Slider2";
+import { useState } from "react";
 function App() {
   // let flag = false;
-
+  const [visible, setVisible] = useState(true);
+  const butttonDisplayText = visible ? "HIDE" : "SHOW";
   return (
     <div className="App">
-      <Slider />
+      {visible ? <Slider /> : <div>Hidden now</div>}
+      <button
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      >
+        {butttonDisplayText}
+      </button>
       {/* <Slider2 /> */}
       {/* {flag ? <Heading /> : <CustomComponent />} */}
       {/* <NavBar
